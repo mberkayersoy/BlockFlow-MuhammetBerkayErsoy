@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16913b962ede04572bbe7806ace83b90, type: 3}
-  m_Name: LargeCube
+  m_Name: Plus_Large
   m_EditorClassIdentifier: 
-  width: 2
-  height: 2
-  shape: 01010101
+  BlockMesh: {fileID: -4751071231881052056, guid: 66dc6edef78714ee59493a857cf10fd7,
+    type: 3}
+  width: 3
+  height: 3
+  shape: 000100010101000100

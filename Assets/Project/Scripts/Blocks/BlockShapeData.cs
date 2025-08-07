@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BlockShapeData", menuName = "ScriptableObjects/New Block Shape Data", order = 0)]
 public class BlockShapeData : ScriptableObject
 {
+    public Mesh BlockMesh;
     public int width = 3;
     public int height = 3;
     public bool[] shape;

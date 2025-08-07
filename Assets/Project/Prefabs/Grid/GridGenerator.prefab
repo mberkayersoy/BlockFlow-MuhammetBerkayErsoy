@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8915357427185509734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2233195315431619898}
+  - component: {fileID: 352220163676709104}
+  m_Layer: 0
+  m_Name: GridGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2233195315431619898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8915357427185509734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &352220163676709104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8915357427185509734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492bd3f4faf49456bad319a71871b9f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _width: 4
+  _height: 5
+  _cellPrefab: {fileID: 8145701580988559824, guid: 493c6b4758d71453e93317a2c7bd53f8,
+    type: 3}
+  _wallPrefab: {fileID: 581298836418155933, guid: 426b90d9300784ae08afd0e6b18197fa,
+    type: 3}
+  _cornerPrefab: {fileID: 6688414497168755173, guid: d490321b84948428e94fd3a2b580aff1,
+    type: 3}
+  _smallGrinderPrefab: {fileID: 3993169601180360060, guid: 201e6217b8b1a42c2ac17392998d86dd,
+    type: 3}
+  _mediumGrinderPrefab: {fileID: 2870494761199412393, guid: 110efbcad581c434b8ac40712182ace6,
+    type: 3}
+  _largeGrinderPrefab: {fileID: 2634220330317744228, guid: 78df0685f918d4e23aa82447bd416048,
+    type: 3}
+  _wallLeft:
+    offset: {x: 0.2, y: 0, z: 0}
+    _rotation: {x: 0, y: 0, z: 0}
+  _wallRight:
+    offset: {x: -0.5, y: 0, z: 0}
+    _rotation: {x: 0, y: 0, z: 0}
+  _wallTop:
+    offset: {x: 0, y: 0, z: -0.5}
+    _rotation: {x: 0, y: -90, z: 0}
+  _wallBottom:
+    offset: {x: 0, y: 0, z: 0.5}
+    _rotation: {x: 0, y: 90, z: 0}
+  _cornerBottomLeft:
+    offset: {x: 0.5, y: 0, z: 0.5}
+    _rotation: {x: -90, y: 0, z: -180}
+  _cornerBottomRight:
+    offset: {x: -0.5, y: 0, z: 0.5}
+    _rotation: {x: -90, y: 0, z: 90}
+  _cornerTopLeft:
+    offset: {x: 0.5, y: 0, z: -0.5}
+    _rotation: {x: -90, y: 0, z: -90}
+  _cornerTopRight:
+    offset: {x: -0.5, y: 0, z: -0.5}
+    _rotation: {x: -90, y: 0, z: 0}

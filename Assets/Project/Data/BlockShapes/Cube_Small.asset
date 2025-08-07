@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16913b962ede04572bbe7806ace83b90, type: 3}
-  m_Name: SmallCube
+  m_Name: Cube_Small
   m_EditorClassIdentifier: 
+  BlockMesh: {fileID: 5005176809694024728, guid: ab86aae36bc2c45898d0472dfac713c4,
+    type: 3}
   width: 1
   height: 1
   shape: 01

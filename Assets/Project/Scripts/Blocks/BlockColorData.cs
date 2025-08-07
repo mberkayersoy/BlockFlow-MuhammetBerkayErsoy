@@ -14,5 +14,3 @@ public class ColorData
     public Color BlockColor;
     public Material BlockMaterial;
 }
-
-

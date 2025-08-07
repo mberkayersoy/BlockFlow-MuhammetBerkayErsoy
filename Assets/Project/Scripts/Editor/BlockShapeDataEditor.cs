@@ -6,9 +6,12 @@ public class BlockShapeDataEditor : Editor
 {
     private BlockShapeData data;
 
+    SerializedProperty blockMeshProp;
+
     private void OnEnable()
     {
         data = (BlockShapeData)target;
+        blockMeshProp = serializedObject.FindProperty("BlockMesh");
 
         EnsureShapeIsValid();
     }
@@ -16,6 +19,8 @@ public class BlockShapeDataEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+
+        EditorGUILayout.PropertyField(blockMeshProp);
 
         EditorGUI.BeginChangeCheck();
 
@@ -40,6 +45,7 @@ public class BlockShapeDataEditor : Editor
 
         serializedObject.ApplyModifiedProperties();
     }
+
 
     private void EnsureShapeIsValid()
     {

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlockMesh: {fileID: -1350644686481176163, guid: bdc80ff0d202d4d4c80c3ab4407079ee,
     type: 3}
-  width: 2
-  height: 2
+  Width: 2
+  Height: 2
   shape: 01000101

@@ -2,7 +2,7 @@
 public enum MovementType
 {
     Free,
-    Veritcal,
+    Vertical,
     Horizontal,
     Static
 }

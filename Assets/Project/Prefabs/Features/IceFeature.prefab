@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _iceMaterial: {fileID: 2100000, guid: 61f8d943a8026460ab268f7a4f8f8438, type: 2}
   _revealText: {fileID: 2834824860339903904}
-  _revealCount: 3
+  _canvas: {fileID: 1173024080710968176}
 --- !u!4 &8127503741708902274 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2803553200098317205, guid: 7deaf71ff72c44fd2bfa96e1bbe1a501,

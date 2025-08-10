@@ -5,7 +5,5 @@ public enum BlockColorType
     Red,
     Green,
     Blue,
-    Orange,
-    Purple,
     Yellow
 }

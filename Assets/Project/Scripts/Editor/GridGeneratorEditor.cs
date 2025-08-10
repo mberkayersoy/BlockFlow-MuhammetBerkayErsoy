@@ -23,10 +23,11 @@ public class GridGeneratorEditor : OdinEditor
         GUILayout.Space(10);
         GUILayout.Label("Grid Cell Editor", EditorStyles.boldLabel);
 
-        var gridField = generator.GetType().GetField("_gridCells", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-        if (gridField?.GetValue(generator) is GridCell[,] gridCells && gridCells != null)
+        if (generator.GridData != null && generator.GridData.Cells != null)
         {
-            GUIStyle cellStyle = new GUIStyle(EditorStyles.popup)
+            GridCell[,] gridCells = generator.GridData.Cells;
+
+            GUIStyle cellStyle = new GUIStyle(EditorStyles.label)
             {
                 fixedWidth = 60,
                 fixedHeight = 60,
@@ -36,36 +37,55 @@ public class GridGeneratorEditor : OdinEditor
                 fontSize = 10
             };
 
-            int width = generator.Width;
-            int height = generator.Height;
+            int width = generator.GridData.Width;
+            int height = generator.GridData.Height;
+
+            int drawWidth = width + 2; // for edges
+            int drawHeight = height + 2; // for edges
 
             EditorGUILayout.BeginVertical();
 
-            for (int y = height - 1; y >= 0; y--)
+            for (int y = drawHeight - 1; y >= 0; y--)
             {
                 EditorGUILayout.BeginHorizontal();
 
-                for (int x = 0; x < width; x++)
+                for (int x = 0; x < drawWidth; x++)
                 {
-                    bool isEdge = x == 0 || x == width - 1 || y == 0 || y == height - 1;
+                    Rect cellRect = GUILayoutUtility.GetRect(60, 60, GUILayout.ExpandWidth(false), GUILayout.ExpandHeight(false));
 
-                    if (!isEdge)
+                    bool isCorner =
+                        (x == 0 && y == 0) ||
+                        (x == 0 && y == drawHeight - 1) ||
+                        (x == drawWidth - 1 && y == 0) ||
+                        (x == drawWidth - 1 && y == drawHeight - 1);
+
+                    bool isWall = !isCorner && (
+                        x == 0 || x == drawWidth - 1 ||
+                        y == 0 || y == drawHeight - 1
+                    );
+
+                    if (isCorner)
                     {
-                        Rect cellRect = GUILayoutUtility.GetRect(60, 60, GUILayout.ExpandWidth(false), GUILayout.ExpandHeight(false));
-                        EditorGUI.DrawRect(new Rect(cellRect.x - 1, cellRect.y - 1, cellRect.width + 2, cellRect.height + 2), Color.red);
-                        GUIStyle noMargin = new GUIStyle(cellStyle);
-                        EditorGUI.BeginChangeCheck();
-                        BlockColorType newColorType = (BlockColorType)EditorGUI.EnumPopup(cellRect, gridCells[x, y].ColorType, noMargin);
-                        if (EditorGUI.EndChangeCheck())
-                        {
-                            Undo.RecordObject(generator, "Change Grid Cell Color");
-                            gridCells[x, y].ColorType = newColorType;
-                            EditorUtility.SetDirty(generator);
-                        }
+                        GUI.Label(cellRect, "", cellStyle);
+                    }
+                    else if (isWall)
+                    {
+                        EditorGUI.DrawRect(
+                            new Rect(cellRect.x - 1, cellRect.y - 1, cellRect.width + 2, cellRect.height + 2),
+                            Color.black
+                        );
+                        GUI.Label(cellRect, "WALL", cellStyle);
                     }
                     else
                     {
-                        DrawCell(gridCells[x, y], cellStyle, generator);
+                        int gridX = x - 1;
+                        int gridY = y - 1;
+                        var cell = gridCells[gridX, gridY];
+                        EditorGUI.DrawRect(
+                            new Rect(cellRect.x - 1, cellRect.y - 1, cellRect.width + 2, cellRect.height + 2),
+                            Color.gray
+                        );
+                        GUI.Label(cellRect, $"({cell.Pos.x},{cell.Pos.y})", cellStyle);
                     }
                 }
 
@@ -77,18 +97,6 @@ public class GridGeneratorEditor : OdinEditor
         else
         {
             GUILayout.Label("Generate the grid to edit cells.", EditorStyles.helpBox);
-        }
-    }
-
-    private void DrawCell(GridCell cell, GUIStyle cellStyle, GridGenerator generator)
-    {
-        EditorGUI.BeginChangeCheck();
-        BlockColorType newColorType = (BlockColorType)EditorGUILayout.EnumPopup(cell.ColorType, cellStyle, GUILayout.Width(60), GUILayout.Height(60));
-        if (EditorGUI.EndChangeCheck())
-        {
-            Undo.RecordObject(generator, "Change Grid Cell Color");
-            cell.ColorType = newColorType;
-            EditorUtility.SetDirty(generator);
         }
     }
 }

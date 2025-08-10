@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163c17e19355a4224b4a919a1862c706, type: 3}
+  m_Name: BlockColorData
+  m_EditorClassIdentifier: 
+  BlockColors:
+  - ColorType: 0
+    BlockColor: {r: 1, g: 1, b: 1, a: 1}
+    BlockMaterial: {fileID: 2100000, guid: 7d309beedea2144ebbd26d19a9154d6c, type: 2}
+  - ColorType: 1
+    BlockColor: {r: 1, g: 0, b: 0, a: 1}
+    BlockMaterial: {fileID: 2100000, guid: 7d05c45f7ffc44f94b6bf229d7b8fb33, type: 2}
+  - ColorType: 2
+    BlockColor: {r: 0, g: 1, b: 0, a: 1}
+    BlockMaterial: {fileID: 2100000, guid: 895f394f977c845448cf79b430e0d715, type: 2}
+  - ColorType: 3
+    BlockColor: {r: 0, g: 0.49172926, b: 1, a: 1}
+    BlockMaterial: {fileID: 2100000, guid: b15378374a60840e1932038bd2b03d0e, type: 2}
+  - ColorType: 4
+    BlockColor: {r: 1, g: 1, b: 0, a: 1}
+    BlockMaterial: {fileID: 2100000, guid: b9a137ac2ffe14a8fb5f29dbb5c8ec74, type: 2}

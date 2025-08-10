@@ -1,31 +1,23 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(BlockShapeData))]
+[CustomEditor(typeof(ShapeData))]
 public class BlockShapeDataEditor : Editor
 {
-    private BlockShapeData data;
-
-    SerializedProperty blockMeshProp;
-
+    private ShapeData data;
     private void OnEnable()
     {
-        data = (BlockShapeData)target;
-        blockMeshProp = serializedObject.FindProperty("BlockMesh");
-
+        data = (ShapeData)target;
         EnsureShapeIsValid();
     }
-
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
-        EditorGUILayout.PropertyField(blockMeshProp);
-
         EditorGUI.BeginChangeCheck();
 
-        int newWidth = EditorGUILayout.IntField("Width", data.width);
-        int newHeight = EditorGUILayout.IntField("Height", data.height);
+        int newWidth = EditorGUILayout.IntField("Width", data.Width);
+        int newHeight = EditorGUILayout.IntField("Height", data.Height);
 
         if (EditorGUI.EndChangeCheck())
         {
@@ -46,22 +38,21 @@ public class BlockShapeDataEditor : Editor
         serializedObject.ApplyModifiedProperties();
     }
 
-
     private void EnsureShapeIsValid()
     {
-        if (data.shape == null || data.shape.Length != data.width * data.height)
+        if (data.shape == null || data.shape.Length != data.Width * data.Height)
         {
-            data.Resize(data.width, data.height);
+            data.Resize(data.Width, data.Height);
         }
     }
 
     private void DrawGrid()
     {
-        for (int y = 0; y < data.height; y++)
+        for (int y = 0; y < data.Height; y++)
         {
             EditorGUILayout.BeginHorizontal();
 
-            for (int x = 0; x < data.width; x++)
+            for (int x = 0; x < data.Width; x++)
             {
                 bool current = data.GetCell(x, y);
                 GUI.backgroundColor = current ? Color.green : Color.red;

@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShapeFeature
       objectReference: {fileID: 0}
+    - target: {fileID: 7929116026581844937, guid: 7deaf71ff72c44fd2bfa96e1bbe1a501,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -90,3 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6538d594b1b6045219c661677b68254a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _blockLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  blockColorData: {fileID: 11400000, guid: b155905cf1770441b893b87da442e1bf, type: 2}
+  shapeToMeshData: {fileID: 11400000, guid: b2444ba3bda634add8a54258dead0882, type: 2}
+  cellSize: 1

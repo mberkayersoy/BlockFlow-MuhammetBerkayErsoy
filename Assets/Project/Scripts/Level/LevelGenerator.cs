@@ -8,14 +8,13 @@ using UnityEngine.Rendering;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [Header("Level Info")]
+    [SerializeField, Range(1, 5)] private int _level = 1;
     [Header("References")]
     [SerializeField] private BlockBehaviour _blockPrefab;
     [SerializeField] private GridGenerator _gridGen;
     [SerializeField] private List<FeaturePrefabMapping> _featurePrefabList;
     [SerializeField] private SerializedDictionary<BlockColorType, Color> _editorColors;
-
-    [Header("Level Info")]
-    [SerializeField] private string _levelName = "Level_01";
 
     [Header("Grid Size")]
     [SerializeField] private int _width = 5;
@@ -45,6 +44,7 @@ public class LevelGenerator : MonoBehaviour
 
     public LevelData LevelData => _levelData;
     public IReadOnlyList<BlockData> BlockPalette => _blockPalette ??= new();
+    public IReadOnlyList<GrinderData> GrinderPalette => _grinderPalette ??= new();
 
     #region GridData Access
     public bool HasGridData => _levelData?.Cells != null;
@@ -72,6 +72,16 @@ public class LevelGenerator : MonoBehaviour
     }
     #endregion
 
+    public void AddNewGrinderTemplate()
+    {
+        var grinderData = new GrinderData();
+        _grinderPalette.Add(grinderData);
+    }
+    public void RemoveGrinderTemplateAt(int index)
+    {
+        if (index < 0 || index >= _grinderPalette.Count) return;
+        _grinderPalette.RemoveAt(index);
+    }
     #region Editor Level Helpers
 
     private void CreateLevelParents()
@@ -202,10 +212,11 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int x = 0; x < shapeFeature.Width; x++)
             {
-                if (!shapeFeature.GetCell(x, y)) continue;
+                if (!shapeFeature.GetCell(x, y))
+                    continue;
 
                 int targetX = gridX + x;
-                int targetY = gridY + y;
+                int targetY = gridY + (shapeFeature.Height - 1 - y);
 
                 if (targetX < 0 || targetX >= GetGridWidth() ||
                     targetY < 0 || targetY >= GetGridHeight() ||
@@ -215,6 +226,7 @@ public class LevelGenerator : MonoBehaviour
         }
         return true;
     }
+
     #endregion
 
     #region Utilities
@@ -250,7 +262,7 @@ public class LevelGenerator : MonoBehaviour
         if (!Directory.Exists(folderPath))
             Directory.CreateDirectory(folderPath);
 
-        string filePath = Path.Combine(folderPath, $"{_levelName}.json");
+        string filePath = Path.Combine(folderPath, $"Level_{_level}.json");
 
         string json = JsonConvert.SerializeObject(_levelData, JsonSettings);
         File.WriteAllText(filePath, json);
@@ -261,10 +273,11 @@ public class LevelGenerator : MonoBehaviour
         Debug.Log($"Level saved: {filePath}");
     }
 
-    public void LoadLevel(string levelName)
+    public void LoadLevel()
     {
+        DeleteLevel();
         string folderPath = Path.Combine(Application.dataPath, "Levels");
-        string filePath = Path.Combine(folderPath, $"{levelName}.json");
+        string filePath = Path.Combine(folderPath, $"Level_{_level}.json");
 
         if (!File.Exists(filePath))
         {

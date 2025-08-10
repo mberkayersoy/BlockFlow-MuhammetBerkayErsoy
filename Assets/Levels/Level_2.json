@@ -1,0 +1,417 @@
+{
+  "Width": 5,
+  "Height": 5,
+  "Cells": [
+    [
+      {
+        "Pos": {
+          "x": 0,
+          "y": 0,
+          "magnitude": 0.0,
+          "sqrMagnitude": 0
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 1,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 2,
+          "magnitude": 2.0,
+          "sqrMagnitude": 4
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 3,
+          "magnitude": 3.0,
+          "sqrMagnitude": 9
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 4,
+          "magnitude": 4.0,
+          "sqrMagnitude": 16
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 1,
+          "y": 0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 1,
+          "magnitude": 1.41421354,
+          "sqrMagnitude": 2
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 2,
+          "magnitude": 2.236068,
+          "sqrMagnitude": 5
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 3,
+          "magnitude": 3.1622777,
+          "sqrMagnitude": 10
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 4,
+          "magnitude": 4.12310553,
+          "sqrMagnitude": 17
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 2,
+          "y": 0,
+          "magnitude": 2.0,
+          "sqrMagnitude": 4
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 1,
+          "magnitude": 2.236068,
+          "sqrMagnitude": 5
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 2,
+          "magnitude": 2.828427,
+          "sqrMagnitude": 8
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 3,
+          "magnitude": 3.60555124,
+          "sqrMagnitude": 13
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 4,
+          "magnitude": 4.472136,
+          "sqrMagnitude": 20
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 3,
+          "y": 0,
+          "magnitude": 3.0,
+          "sqrMagnitude": 9
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 1,
+          "magnitude": 3.1622777,
+          "sqrMagnitude": 10
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 2,
+          "magnitude": 3.60555124,
+          "sqrMagnitude": 13
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 3,
+          "magnitude": 4.2426405,
+          "sqrMagnitude": 18
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 4,
+          "magnitude": 5.0,
+          "sqrMagnitude": 25
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 4,
+          "y": 0,
+          "magnitude": 4.0,
+          "sqrMagnitude": 16
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 1,
+          "magnitude": 4.12310553,
+          "sqrMagnitude": 17
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 2,
+          "magnitude": 4.472136,
+          "sqrMagnitude": 20
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 3,
+          "magnitude": 5.0,
+          "sqrMagnitude": 25
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 4,
+          "magnitude": 5.656854,
+          "sqrMagnitude": 32
+        }
+      }
+    ]
+  ],
+  "BlockDatas": [
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 3,
+            "Shape": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 2
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 0,
+              "y": 3,
+              "magnitude": 3.0,
+              "sqrMagnitude": 9
+            }
+          }
+        ]
+      },
+      "BlockName": "Blue Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true
+            ],
+            "Width": 1,
+            "Height": 1
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 3,
+            "Pos": {
+              "x": 2,
+              "y": 2,
+              "magnitude": 2.828427,
+              "sqrMagnitude": 8
+            }
+          }
+        ]
+      },
+      "BlockName": "Red Static"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true
+            ],
+            "Width": 1,
+            "Height": 1
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 3,
+            "Pos": {
+              "x": 3,
+              "y": 2,
+              "magnitude": 3.60555124,
+              "sqrMagnitude": 13
+            }
+          }
+        ]
+      },
+      "BlockName": "Red Static"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 2,
+            "Pos": {
+              "x": 0,
+              "y": 0,
+              "magnitude": 0.0,
+              "sqrMagnitude": 0
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 3,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Blue Horizontal"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 4,
+              "y": 0,
+              "magnitude": 4.0,
+              "sqrMagnitude": 16
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 2,
+            "Shape": [
+              true
+            ],
+            "Width": 1,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 4,
+              "y": 4,
+              "magnitude": 5.656854,
+              "sqrMagnitude": 32
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 2,
+            "Shape": [
+              true
+            ],
+            "Width": 1,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 3,
+            "Shape": [
+              false,
+              true,
+              false,
+              true,
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 3
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 3,
+              "y": 1,
+              "magnitude": 3.1622777,
+              "sqrMagnitude": 10
+            }
+          }
+        ]
+      },
+      "BlockName": "Blue Free"
+    }
+  ],
+  "GrinderDatas": []
+}

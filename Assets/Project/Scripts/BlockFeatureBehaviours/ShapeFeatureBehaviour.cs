@@ -27,7 +27,6 @@ public class ShapeFeatureBehaviour : BaseBlockFeatureBehaviour
     public override void Apply(BlockBehaviour block)
     {
         _block = block;
-        _shapeData = (ShapeFeatureData)_data;
         _colorType = _shapeData.ColorType;
 
         if (block.Model == null)

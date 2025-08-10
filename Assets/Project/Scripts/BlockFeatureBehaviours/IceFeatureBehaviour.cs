@@ -8,10 +8,14 @@ public class IceFeatureBehaviour : BaseBlockFeatureBehaviour
     [SerializeField] private Transform _canvas;
 
     private IceFeatureData _iceData;
+    protected override void OnDataAssigned()
+    {
+        base.OnDataAssigned();
+        _iceData = (IceFeatureData)_data;
+    }
     public override void Apply(BlockBehaviour block)
     {
         _block = block;
-        _iceData = (IceFeatureData)_data;
         var shapeFeature = _block.GetFeature<ShapeFeatureBehaviour>();
         shapeFeature.SetMaterial(_iceMaterial);
         _revealText.text = _iceData.RevealCount.ToString();
@@ -19,10 +23,6 @@ public class IceFeatureBehaviour : BaseBlockFeatureBehaviour
         Vector3 pivotOffset = shapeFeature.GetPivotOffsetFromShape();
         pivotOffset.y = 1.1f;
         _canvas.localPosition = pivotOffset;
-    }
-    protected override void OnDataAssigned()
-    {
-        _iceData = (IceFeatureData)_data;
     }
 
     public void Reveal()

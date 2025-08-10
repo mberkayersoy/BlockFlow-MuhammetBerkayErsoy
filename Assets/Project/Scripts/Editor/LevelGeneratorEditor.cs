@@ -7,15 +7,22 @@ using UnityEngine;
 public class LevelGeneratorEditor : OdinEditor
 {
     private LevelGenerator levelGen;
-    private int paletteSelected = -1;
+    private int _selectedBlockPalette = -1;
+    private int _selectedGrinderPalette = -1;
     protected override void OnEnable()
     {
         base.OnEnable();
         levelGen = (LevelGenerator)target;
-        paletteSelected = levelGen?.SelectedBlockPalette ?? -1;
+        _selectedBlockPalette = levelGen?.SelectedBlockPalette ?? -1;
 
-        if (levelGen != null && (paletteSelected < 0 || paletteSelected >= levelGen.BlockPalette.Count))
-            paletteSelected = -1;
+        if (levelGen != null && (_selectedBlockPalette < 0 || _selectedBlockPalette >= levelGen.BlockPalette.Count))
+            _selectedBlockPalette = -1;
+
+
+        _selectedGrinderPalette = levelGen?.SelectedGrinderPalette ?? -1;
+
+        if (levelGen != null && (_selectedGrinderPalette < 0 || _selectedGrinderPalette >= levelGen.GrinderPalette.Count))
+            _selectedGrinderPalette = -1;
     }
 
     public override void OnInspectorGUI()
@@ -28,12 +35,11 @@ public class LevelGeneratorEditor : OdinEditor
             if (levelGen == null)
                 return;
             DrawPaletteControls();
-            DrawPaletteButtons();
-            DrawSelectedPaletteDetails();
             DrawShapeBlockCreator();
 
             DrawGridControls();
             DrawGridVisualizer();
+
 
 
             if (GUILayout.Button("Save Level"))
@@ -42,11 +48,11 @@ public class LevelGeneratorEditor : OdinEditor
             }
             if (GUILayout.Button("Load Level"))
             {
-                levelGen.LoadLevel("Level_01");
+                levelGen.LoadLevel();
             }
 
-            if (levelGen.SelectedBlockPalette != paletteSelected)
-                levelGen.SelectedBlockPalette = paletteSelected;
+            if (levelGen.SelectedBlockPalette != _selectedBlockPalette)
+                levelGen.SelectedBlockPalette = _selectedBlockPalette;
         }
         catch (System.Exception ex)
         {
@@ -128,30 +134,33 @@ public class LevelGeneratorEditor : OdinEditor
 
     #region UI Draw Methods
 
+
     private void DrawPaletteControls()
     {
         GUILayout.Space(8);
-        GUILayout.Label("Palette Controls", EditorStyles.boldLabel);
+        GUILayout.Label("PALETTE CONTROLS", EditorStyles.boldLabel);
+        DrawPaletteButtons();
+        DrawSelectedBlockPaletteDetails();
+        DrawGrinderButtons();
+        DrawSelectedGrinderPaletteDetails();
+    }
 
-        EditorGUILayout.BeginHorizontal();
+    private void DrawPaletteButtons()
+    {
+        GUILayout.Label("Blocks", EditorStyles.boldLabel);
 
         if (GUILayout.Button("Add New Block Template"))
         {
             Undo.RecordObject(levelGen, "Add Block Template");
             levelGen.AddNewBlockTemplate();
             EditorUtility.SetDirty(levelGen);
-            paletteSelected = levelGen.BlockPalette.Count - 1;
+            _selectedBlockPalette = levelGen.BlockPalette.Count - 1;
         }
-        EditorGUILayout.EndHorizontal();
-        GUILayout.Space(6);
-    }
 
-    private void DrawPaletteButtons()
-    {
         var palette = levelGen.BlockPalette;
         if (palette == null || palette.Count == 0)
         {
-            EditorGUILayout.HelpBox("Pallete is empty. Add new palette temolate.", MessageType.Info);
+            EditorGUILayout.HelpBox("Pallete is empty. Add new palette template.", MessageType.Info);
             return;
         }
 
@@ -163,44 +172,118 @@ public class LevelGeneratorEditor : OdinEditor
                 ? pd.BlockName
                 : $"Block {i}";
 
-            string featSummary = "";
 
             bool toggled = GUILayout.Toggle(
-                paletteSelected == i,
-                $"{title}\n{featSummary}",
+                _selectedBlockPalette == i,
+                $"{title}",
                 "Button",
                 GUILayout.Width(100), GUILayout.Height(48)
             );
 
-            if (toggled && paletteSelected != i)
+            if (toggled && _selectedBlockPalette != i)
             {
-                paletteSelected = i;
-                levelGen.SelectedBlockPalette = paletteSelected;
+                _selectedBlockPalette = i;
+                levelGen.SelectedBlockPalette = _selectedBlockPalette;
+                EditorUtility.SetDirty(levelGen);
+            }
+        }
+        EditorGUILayout.EndHorizontal();
+        GUILayout.Space(15);
+    }
+    private void DrawGrinderButtons()
+    {
+        GUILayout.Label("GRINDERS", EditorStyles.boldLabel);
+
+        if (GUILayout.Button("Add New Grinder Template"))
+        {
+            Undo.RecordObject(levelGen, "Add Grinder Template");
+            levelGen.AddNewGrinderTemplate();
+            EditorUtility.SetDirty(levelGen);
+            _selectedGrinderPalette = levelGen.GrinderPalette.Count - 1;
+        }
+
+        var palette = levelGen.GrinderPalette;
+
+        if (palette == null || palette.Count == 0)
+        {
+            EditorGUILayout.HelpBox("Grinder Palette is empty. Add new grinder palette template.", MessageType.Info);
+            return;
+        }
+
+        EditorGUILayout.BeginHorizontal();
+        for (int i = 0; i < palette.Count; i++)
+        {
+            var pd = palette[i];
+            string title = pd != null && !string.IsNullOrWhiteSpace(pd.GrinderName)
+                ? pd.GrinderName
+                : $"Grinder {i}";
+
+
+            bool toggled = GUILayout.Toggle(
+                _selectedGrinderPalette == i,
+                $"{title}",
+                "Button",
+                GUILayout.Width(100), GUILayout.Height(48)
+            );
+
+            if (toggled && _selectedGrinderPalette != i)
+            {
+                _selectedGrinderPalette = i;
+                levelGen.SelectedGrinderPalette = _selectedGrinderPalette;
                 EditorUtility.SetDirty(levelGen);
             }
         }
         EditorGUILayout.EndHorizontal();
         GUILayout.Space(6);
     }
-
-
-    private void DrawSelectedPaletteDetails()
+    private void DrawSelectedGrinderPaletteDetails()
     {
-        var palette = levelGen.BlockPalette;
-        if (paletteSelected < 0 || paletteSelected >= palette.Count)
+        var palette = levelGen.GrinderPalette;
+        if (_selectedGrinderPalette < 0 || _selectedGrinderPalette >= palette.Count)
             return;
 
         EditorGUILayout.BeginVertical("box");
-        GUILayout.Label($"Selected: #{levelGen.BlockPalette[paletteSelected].BlockName}", EditorStyles.boldLabel);
+        GUILayout.Label($"Selected: #{levelGen.GrinderPalette[_selectedGrinderPalette].GrinderName}", EditorStyles.boldLabel);
 
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("Remove"))
         {
-            if (EditorUtility.DisplayDialog("Confirm", $"Are you sure you want to delete #{paletteSelected}?", "Yes", "No"))
+            if (EditorUtility.DisplayDialog("Confirm", $"Are you sure you want to delete #{_selectedGrinderPalette}?", "Yes", "No"))
+            {
+                Undo.RecordObject(levelGen, "Remove Grinder Template");
+                levelGen.RemoveGrinderTemplateAt(_selectedGrinderPalette);
+                _selectedGrinderPalette = -1;
+                levelGen.SelectedGrinderPalette = -1;
+                EditorUtility.SetDirty(levelGen);
+            }
+        }
+        EditorGUILayout.EndHorizontal();
+
+        GUILayout.Space(6);
+        EditorGUILayout.HelpBox(
+            "Edit the grinder details in the 'Grinder Palette' field.",
+            MessageType.Info
+        );
+        EditorGUILayout.EndVertical();
+    }
+
+    private void DrawSelectedBlockPaletteDetails()
+    {
+        var palette = levelGen.BlockPalette;
+        if (_selectedBlockPalette < 0 || _selectedBlockPalette >= palette.Count)
+            return;
+
+        EditorGUILayout.BeginVertical("box");
+        GUILayout.Label($"Selected: #{levelGen.BlockPalette[_selectedBlockPalette].BlockName}", EditorStyles.boldLabel);
+
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("Remove"))
+        {
+            if (EditorUtility.DisplayDialog("Confirm", $"Are you sure you want to delete #{_selectedBlockPalette}?", "Yes", "No"))
             {
                 Undo.RecordObject(levelGen, "Remove Block Template");
-                levelGen.RemoveBlockTemplateAt(paletteSelected);
-                paletteSelected = -1;
+                levelGen.RemoveBlockTemplateAt(_selectedBlockPalette);
+                _selectedBlockPalette = -1;
                 levelGen.SelectedBlockPalette = -1;
                 EditorUtility.SetDirty(levelGen);
             }
@@ -214,7 +297,6 @@ public class LevelGeneratorEditor : OdinEditor
         );
         EditorGUILayout.EndVertical();
     }
-
     private void DrawGridControls()
     {
         GUILayout.Space(10);
@@ -226,9 +308,9 @@ public class LevelGeneratorEditor : OdinEditor
             levelGen.CreateEmptyLevel(levelGen.Width, levelGen.Height);
             EditorUtility.SetDirty(levelGen);
         }
-        if (GUILayout.Button("Delete Level Temporary Level"))
+        if (GUILayout.Button("Clear Level Inspector"))
         {
-            Undo.RecordObject(levelGen, "Delete Level Temporary Level");
+            Undo.RecordObject(levelGen, "Clear Level Inspector");
             levelGen.DeleteLevel();
             EditorUtility.SetDirty(levelGen);
         }
@@ -329,11 +411,11 @@ public class LevelGeneratorEditor : OdinEditor
                     {
                         if (Event.current.button == 0)
                         {
-                            if (paletteSelected >= 0 && paletteSelected < levelGen.BlockPalette.Count)
+                            if (_selectedBlockPalette >= 0 && _selectedBlockPalette < levelGen.BlockPalette.Count)
                             {
                                 Undo.RecordObject(levelGen, "Place Block");
 
-                                levelGen.PlaceBlockAt(cell.Pos.x, cell.Pos.y, paletteSelected);
+                                levelGen.PlaceBlockAt(cell.Pos.x, cell.Pos.y, _selectedBlockPalette);
                                 EditorUtility.SetDirty(levelGen);
                             }
                         }
@@ -351,6 +433,55 @@ public class LevelGeneratorEditor : OdinEditor
             EditorGUILayout.EndHorizontal();
         }
         EditorGUILayout.EndVertical();
+    }
+
+    private void TryPlaceBlock(GridCell cell, Rect cellRect)
+    {
+        if (Event.current.type == EventType.MouseDown && cellRect.Contains(Event.current.mousePosition))
+        {
+            if (Event.current.button == 0)
+            {
+                if (_selectedBlockPalette >= 0 && _selectedBlockPalette < levelGen.BlockPalette.Count)
+                {
+                    Undo.RecordObject(levelGen, "Place Block");
+
+                    levelGen.PlaceBlockAt(cell.Pos.x, cell.Pos.y, _selectedBlockPalette);
+                    EditorUtility.SetDirty(levelGen);
+                }
+            }
+            else if (Event.current.button == 1)
+            {
+                Undo.RecordObject(levelGen, "Remove Block");
+                levelGen.RemoveBlockAt(cell.Pos.x, cell.Pos.y);
+                EditorUtility.SetDirty(levelGen);
+            }
+            Event.current.Use();
+        }
+    }
+    private void TryPlaceGrinder(GridCell cell, Rect cellRect)
+    {
+        if (Event.current.type == EventType.MouseDown && cellRect.Contains(Event.current.mousePosition))
+        {
+            if (Event.current.button == 0) // Sol tık ekle
+            {
+                if (_selectedGrinderPalette >= 0 && _selectedGrinderPalette < levelGen.GrinderPalette.Count)
+                {
+                    Undo.RecordObject(levelGen, "Place Grinder");
+                    // levelGen.PlaceGrinderAt(cell.Pos.x, cell.Pos.y, _selectedGrinderPalette);
+                    EditorUtility.SetDirty(levelGen);
+                }
+            }
+            else if (Event.current.button == 1) // Sağ tık sil
+            {
+                Undo.RecordObject(levelGen, "Remove Grinder");
+                // var existing = levelGen.LevelData.GetGrinderAtCell(cell.Pos.x, cell.Pos.y);
+                // if (existing != null)
+                //     levelGen.LevelData.GrinderDatas.Remove(existing);
+
+                EditorUtility.SetDirty(levelGen);
+            }
+            Event.current.Use();
+        }
     }
     #endregion
 }

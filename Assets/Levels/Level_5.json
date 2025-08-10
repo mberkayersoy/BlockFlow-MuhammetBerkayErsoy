@@ -1,0 +1,1168 @@
+{
+  "Width": 9,
+  "Height": 9,
+  "Cells": [
+    [
+      {
+        "Pos": {
+          "x": 0,
+          "y": 0,
+          "magnitude": 0.0,
+          "sqrMagnitude": 0
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 1,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 2,
+          "magnitude": 2.0,
+          "sqrMagnitude": 4
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 3,
+          "magnitude": 3.0,
+          "sqrMagnitude": 9
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 4,
+          "magnitude": 4.0,
+          "sqrMagnitude": 16
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 5,
+          "magnitude": 5.0,
+          "sqrMagnitude": 25
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 6,
+          "magnitude": 6.0,
+          "sqrMagnitude": 36
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 7,
+          "magnitude": 7.0,
+          "sqrMagnitude": 49
+        }
+      },
+      {
+        "Pos": {
+          "x": 0,
+          "y": 8,
+          "magnitude": 8.0,
+          "sqrMagnitude": 64
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 1,
+          "y": 0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 1,
+          "magnitude": 1.41421354,
+          "sqrMagnitude": 2
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 2,
+          "magnitude": 2.236068,
+          "sqrMagnitude": 5
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 3,
+          "magnitude": 3.1622777,
+          "sqrMagnitude": 10
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 4,
+          "magnitude": 4.12310553,
+          "sqrMagnitude": 17
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 5,
+          "magnitude": 5.09901953,
+          "sqrMagnitude": 26
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 6,
+          "magnitude": 6.08276272,
+          "sqrMagnitude": 37
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 7,
+          "magnitude": 7.071068,
+          "sqrMagnitude": 50
+        }
+      },
+      {
+        "Pos": {
+          "x": 1,
+          "y": 8,
+          "magnitude": 8.062258,
+          "sqrMagnitude": 65
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 2,
+          "y": 0,
+          "magnitude": 2.0,
+          "sqrMagnitude": 4
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 1,
+          "magnitude": 2.236068,
+          "sqrMagnitude": 5
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 2,
+          "magnitude": 2.828427,
+          "sqrMagnitude": 8
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 3,
+          "magnitude": 3.60555124,
+          "sqrMagnitude": 13
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 4,
+          "magnitude": 4.472136,
+          "sqrMagnitude": 20
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 5,
+          "magnitude": 5.38516474,
+          "sqrMagnitude": 29
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 6,
+          "magnitude": 6.3245554,
+          "sqrMagnitude": 40
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 7,
+          "magnitude": 7.28011,
+          "sqrMagnitude": 53
+        }
+      },
+      {
+        "Pos": {
+          "x": 2,
+          "y": 8,
+          "magnitude": 8.246211,
+          "sqrMagnitude": 68
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 3,
+          "y": 0,
+          "magnitude": 3.0,
+          "sqrMagnitude": 9
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 1,
+          "magnitude": 3.1622777,
+          "sqrMagnitude": 10
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 2,
+          "magnitude": 3.60555124,
+          "sqrMagnitude": 13
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 3,
+          "magnitude": 4.2426405,
+          "sqrMagnitude": 18
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 4,
+          "magnitude": 5.0,
+          "sqrMagnitude": 25
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 5,
+          "magnitude": 5.83095169,
+          "sqrMagnitude": 34
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 6,
+          "magnitude": 6.708204,
+          "sqrMagnitude": 45
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 7,
+          "magnitude": 7.615773,
+          "sqrMagnitude": 58
+        }
+      },
+      {
+        "Pos": {
+          "x": 3,
+          "y": 8,
+          "magnitude": 8.54400349,
+          "sqrMagnitude": 73
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 4,
+          "y": 0,
+          "magnitude": 4.0,
+          "sqrMagnitude": 16
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 1,
+          "magnitude": 4.12310553,
+          "sqrMagnitude": 17
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 2,
+          "magnitude": 4.472136,
+          "sqrMagnitude": 20
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 3,
+          "magnitude": 5.0,
+          "sqrMagnitude": 25
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 4,
+          "magnitude": 5.656854,
+          "sqrMagnitude": 32
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 5,
+          "magnitude": 6.40312433,
+          "sqrMagnitude": 41
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 6,
+          "magnitude": 7.21110249,
+          "sqrMagnitude": 52
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 7,
+          "magnitude": 8.062258,
+          "sqrMagnitude": 65
+        }
+      },
+      {
+        "Pos": {
+          "x": 4,
+          "y": 8,
+          "magnitude": 8.944272,
+          "sqrMagnitude": 80
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 5,
+          "y": 0,
+          "magnitude": 5.0,
+          "sqrMagnitude": 25
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 1,
+          "magnitude": 5.09901953,
+          "sqrMagnitude": 26
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 2,
+          "magnitude": 5.38516474,
+          "sqrMagnitude": 29
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 3,
+          "magnitude": 5.83095169,
+          "sqrMagnitude": 34
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 4,
+          "magnitude": 6.40312433,
+          "sqrMagnitude": 41
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 5,
+          "magnitude": 7.071068,
+          "sqrMagnitude": 50
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 6,
+          "magnitude": 7.81025,
+          "sqrMagnitude": 61
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 7,
+          "magnitude": 8.602325,
+          "sqrMagnitude": 74
+        }
+      },
+      {
+        "Pos": {
+          "x": 5,
+          "y": 8,
+          "magnitude": 9.433981,
+          "sqrMagnitude": 89
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 6,
+          "y": 0,
+          "magnitude": 6.0,
+          "sqrMagnitude": 36
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 1,
+          "magnitude": 6.08276272,
+          "sqrMagnitude": 37
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 2,
+          "magnitude": 6.3245554,
+          "sqrMagnitude": 40
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 3,
+          "magnitude": 6.708204,
+          "sqrMagnitude": 45
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 4,
+          "magnitude": 7.21110249,
+          "sqrMagnitude": 52
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 5,
+          "magnitude": 7.81025,
+          "sqrMagnitude": 61
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 6,
+          "magnitude": 8.485281,
+          "sqrMagnitude": 72
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 7,
+          "magnitude": 9.219544,
+          "sqrMagnitude": 85
+        }
+      },
+      {
+        "Pos": {
+          "x": 6,
+          "y": 8,
+          "magnitude": 10.0,
+          "sqrMagnitude": 100
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 7,
+          "y": 0,
+          "magnitude": 7.0,
+          "sqrMagnitude": 49
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 1,
+          "magnitude": 7.071068,
+          "sqrMagnitude": 50
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 2,
+          "magnitude": 7.28011,
+          "sqrMagnitude": 53
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 3,
+          "magnitude": 7.615773,
+          "sqrMagnitude": 58
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 4,
+          "magnitude": 8.062258,
+          "sqrMagnitude": 65
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 5,
+          "magnitude": 8.602325,
+          "sqrMagnitude": 74
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 6,
+          "magnitude": 9.219544,
+          "sqrMagnitude": 85
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 7,
+          "magnitude": 9.899495,
+          "sqrMagnitude": 98
+        }
+      },
+      {
+        "Pos": {
+          "x": 7,
+          "y": 8,
+          "magnitude": 10.630146,
+          "sqrMagnitude": 113
+        }
+      }
+    ],
+    [
+      {
+        "Pos": {
+          "x": 8,
+          "y": 0,
+          "magnitude": 8.0,
+          "sqrMagnitude": 64
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 1,
+          "magnitude": 8.062258,
+          "sqrMagnitude": 65
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 2,
+          "magnitude": 8.246211,
+          "sqrMagnitude": 68
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 3,
+          "magnitude": 8.54400349,
+          "sqrMagnitude": 73
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 4,
+          "magnitude": 8.944272,
+          "sqrMagnitude": 80
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 5,
+          "magnitude": 9.433981,
+          "sqrMagnitude": 89
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 6,
+          "magnitude": 10.0,
+          "sqrMagnitude": 100
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 7,
+          "magnitude": 10.630146,
+          "sqrMagnitude": 113
+        }
+      },
+      {
+        "Pos": {
+          "x": 8,
+          "y": 8,
+          "magnitude": 11.3137083,
+          "sqrMagnitude": 128
+        }
+      }
+    ]
+  ],
+  "BlockDatas": [
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 1,
+            "Pos": {
+              "x": 1,
+              "y": 6,
+              "magnitude": 6.08276272,
+              "sqrMagnitude": 37
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 2,
+            "Shape": [
+              false,
+              true,
+              false,
+              true,
+              true,
+              true,
+              false,
+              true,
+              false
+            ],
+            "Width": 3,
+            "Height": 3
+          }
+        ]
+      },
+      "BlockName": "Green Vertical"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 2,
+            "Pos": {
+              "x": 2,
+              "y": 1,
+              "magnitude": 2.236068,
+              "sqrMagnitude": 5
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 3,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Blue Horizontal"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 2,
+            "Pos": {
+              "x": 7,
+              "y": 6,
+              "magnitude": 9.219544,
+              "sqrMagnitude": 85
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 3,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Blue Horizontal"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 2
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 0,
+              "y": 2,
+              "magnitude": 2.0,
+              "sqrMagnitude": 4
+            }
+          }
+        ]
+      },
+      "BlockName": "Blue Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "IceFeatureData, Assembly-CSharp",
+            "RevealCount": 8,
+            "RevealLeft": 0
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 7,
+              "y": 3,
+              "magnitude": 7.615773,
+              "sqrMagnitude": 58
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 4,
+            "Shape": [
+              false,
+              true,
+              false,
+              true,
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 3
+          }
+        ]
+      },
+      "BlockName": "Ice(6) Free Yellow"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 2,
+            "Pos": {
+              "x": 2,
+              "y": 3,
+              "magnitude": 3.60555124,
+              "sqrMagnitude": 13
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 2,
+            "Shape": [
+              false,
+              true,
+              false,
+              true,
+              true,
+              true
+            ],
+            "Width": 3,
+            "Height": 2
+          }
+        ]
+      },
+      "BlockName": "Blue Horizontal"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "IceFeatureData, Assembly-CSharp",
+            "RevealCount": 8,
+            "RevealLeft": 0
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 0,
+              "y": 0,
+              "magnitude": 0.0,
+              "sqrMagnitude": 0
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 4,
+            "Shape": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 2
+          }
+        ]
+      },
+      "BlockName": "Ice(6) Free Yellow"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "IceFeatureData, Assembly-CSharp",
+            "RevealCount": 8,
+            "RevealLeft": 0
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 6,
+              "y": 8,
+              "magnitude": 10.0,
+              "sqrMagnitude": 100
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 4,
+            "Shape": [
+              true,
+              true,
+              true
+            ],
+            "Width": 3,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Ice(6) Free Yellow"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 2,
+            "Pos": {
+              "x": 0,
+              "y": 8,
+              "magnitude": 8.0,
+              "sqrMagnitude": 64
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 2,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Blue Horizontal"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 0,
+            "Shape": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 2
+          },
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 3,
+            "Pos": {
+              "x": 5,
+              "y": 1,
+              "magnitude": 5.09901953,
+              "sqrMagnitude": 26
+            }
+          }
+        ]
+      },
+      "BlockName": "Red Static"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 7,
+              "y": 0,
+              "magnitude": 7.0,
+              "sqrMagnitude": 49
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 2,
+            "Shape": [
+              true,
+              false,
+              true,
+              true,
+              false,
+              true
+            ],
+            "Width": 2,
+            "Height": 3
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 5,
+              "y": 3,
+              "magnitude": 5.83095169,
+              "sqrMagnitude": 34
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true,
+              false,
+              true,
+              false,
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 3
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 6,
+              "y": 0,
+              "magnitude": 6.0,
+              "sqrMagnitude": 36
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 7,
+              "y": 7,
+              "magnitude": 9.899495,
+              "sqrMagnitude": 98
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 5,
+              "y": 6,
+              "magnitude": 7.81025,
+              "sqrMagnitude": 61
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    },
+    {
+      "BlockFeatures": {
+        "$type": "System.Collections.Generic.List`1[[BaseBlockFeatureData, Assembly-CSharp]], mscorlib",
+        "$values": [
+          {
+            "$type": "MovementFeatureData, Assembly-CSharp",
+            "MovementAxis": 0,
+            "Pos": {
+              "x": 5,
+              "y": 7,
+              "magnitude": 8.602325,
+              "sqrMagnitude": 74
+            }
+          },
+          {
+            "$type": "ShapeFeatureData, Assembly-CSharp",
+            "ColorType": 1,
+            "Shape": [
+              true,
+              true
+            ],
+            "Width": 2,
+            "Height": 1
+          }
+        ]
+      },
+      "BlockName": "Green Free"
+    }
+  ],
+  "GrinderDatas": []
+}

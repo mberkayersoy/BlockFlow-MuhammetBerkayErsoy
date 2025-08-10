@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624b18acf184c453b9977b6fdd7b5752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _level: 5
   _blockPrefab: {fileID: 2150450117946952652, guid: 3a6fda78a831d4d54b6a89eefa1e0a20,
     type: 3}
   _gridGen: {fileID: 130068725}
@@ -610,25 +611,35 @@ MonoBehaviour:
     - {r: 0, g: 1, b: 0, a: 1}
     - {r: 0, g: 0.60875654, b: 1, a: 1}
     - {r: 1, g: 1, b: 0, a: 1}
-  _levelName: Level_01
-  _width: 8
-  _height: 8
+  _width: 9
+  _height: 9
   _blockPalette:
-  - _blockName: Green
+  - _blockName: Green Vertical
     _blockFeatures:
     - rid: 7060584478061625922
     - rid: 7060584478061625923
-  - _blockName: Blue
+  - _blockName: Blue Horizontal
     _blockFeatures:
     - rid: 7060584478061625924
     - rid: 7060584478061625925
-  - _blockName: Yellow
+  - _blockName: Static
     _blockFeatures:
     - rid: 7060584478061625926
     - rid: 7060584478061625927
-  _grinderPalette:
-  - AllowedColor: 1
-    GrinderShape: 
+  - _blockName: Red Free
+    _blockFeatures:
+    - rid: 7060584529141694642
+    - rid: 7060584529141694643
+  - _blockName: Yellow Free
+    _blockFeatures:
+    - rid: 7060584529141694644
+    - rid: 7060584529141694645
+  - _blockName: Free Blue With Ice
+    _blockFeatures:
+    - rid: 7060584529141694646
+    - rid: 7060584529141694647
+    - rid: 7060584529141694649
+  _grinderPalette: []
   _availableShapes:
   - {fileID: 11400000, guid: b59d9140543bd442db62e04959b1285e, type: 2}
   - {fileID: 11400000, guid: 02ae4c5b6bef146aca559bd3d25cac39, type: 2}
@@ -640,7 +651,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4923d5e1327814413b12ce0f7cbd3283, type: 2}
   - {fileID: 11400000, guid: 07b2cee5672f34b438ced3de158c5da8, type: 2}
   - {fileID: 11400000, guid: 22e8c19e81c2143f9b1bb35162ca9389, type: 2}
-  EditorSelectedShapeAsset: {fileID: 11400000, guid: 07b2cee5672f34b438ced3de158c5da8,
+  EditorSelectedShapeAsset: {fileID: 11400000, guid: 79770ba67ca2e483792d34e16e485635,
     type: 2}
   references:
     version: 2
@@ -672,7 +683,7 @@ MonoBehaviour:
     - rid: 7060584478061625926
       type: {class: ShapeFeatureData, ns: , asm: Assembly-CSharp}
       data:
-        ColorType: 4
+        ColorType: 0
         Shape: 
         Width: 0
         Height: 0
@@ -680,7 +691,48 @@ MonoBehaviour:
       type: {class: MovementFeatureData, ns: , asm: Assembly-CSharp}
       data:
         _pos: {x: 0, y: 0}
+        MovementAxis: 3
+    - rid: 7060584529141694642
+      type: {class: MovementFeatureData, ns: , asm: Assembly-CSharp}
+      data:
+        _pos: {x: 0, y: 0}
         MovementAxis: 0
+    - rid: 7060584529141694643
+      type: {class: ShapeFeatureData, ns: , asm: Assembly-CSharp}
+      data:
+        ColorType: 1
+        Shape: 
+        Width: 0
+        Height: 0
+    - rid: 7060584529141694644
+      type: {class: ShapeFeatureData, ns: , asm: Assembly-CSharp}
+      data:
+        ColorType: 4
+        Shape: 
+        Width: 0
+        Height: 0
+    - rid: 7060584529141694645
+      type: {class: MovementFeatureData, ns: , asm: Assembly-CSharp}
+      data:
+        _pos: {x: 0, y: 0}
+        MovementAxis: 0
+    - rid: 7060584529141694646
+      type: {class: IceFeatureData, ns: , asm: Assembly-CSharp}
+      data:
+        RevealCount: 8
+        RevealLeft: 0
+    - rid: 7060584529141694647
+      type: {class: MovementFeatureData, ns: , asm: Assembly-CSharp}
+      data:
+        _pos: {x: 0, y: 0}
+        MovementAxis: 0
+    - rid: 7060584529141694649
+      type: {class: ShapeFeatureData, ns: , asm: Assembly-CSharp}
+      data:
+        ColorType: 3
+        Shape: 
+        Width: 0
+        Height: 0
 --- !u!1 &1631458247
 GameObject:
   m_ObjectHideFlags: 0

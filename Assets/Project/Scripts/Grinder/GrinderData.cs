@@ -2,5 +2,6 @@
 public class GrinderData
 {
     public BlockColorType AllowedColor;
-    public bool[] GrinderShape;
+    public int GrinderSize;
+    public string GrinderName;
 }

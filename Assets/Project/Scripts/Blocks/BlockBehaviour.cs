@@ -48,7 +48,11 @@ public class BlockBehaviour : MonoBehaviour
             var instance = Instantiate(mapping.Prefab, transform);
             instance.SetData(feature);
             _featureBehaviours.Add(instance);
-            instance.Apply(this);
+        }
+
+        foreach (var behaviour in _featureBehaviours)
+        {
+            behaviour.Apply(this);
         }
     }
 

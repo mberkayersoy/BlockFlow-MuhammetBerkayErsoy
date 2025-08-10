@@ -1,22 +1,29 @@
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 [ExecuteAlways]
 public class MovementFeatureBehaviour : BaseBlockFeatureBehaviour
 {
-    [SerializeField] private List<Sprite> _arrowSprites;
-    private SpriteRenderer _spriteRenderer;
     private MovementFeatureData _movementData;
+    [SerializeField] private TextMeshProUGUI _movementTypeText;
+    [SerializeField] private Transform _canvas;
     protected override void OnDataAssigned()
     {
+        base.OnDataAssigned();
         _movementData = (MovementFeatureData)_data;
     }
     public override void Apply(BlockBehaviour block)
     {
         _block = block;
-        _movementData = (MovementFeatureData)_data;
         _movementData.OnPositionChanged += HandlePositionChanged;
+        if (_movementData.MovementAxis != MovementType.Free)
+        {
+            _movementTypeText.text = _movementData.MovementAxis.ToString();
+        }
+        Vector3 pivotOffset = _block.GetFeature<ShapeFeatureBehaviour>().GetPivotOffsetFromShape();
+        pivotOffset.y = 1.1f;
+        _canvas.localPosition = pivotOffset;
     }
     private void HandlePositionChanged(Vector2Int newPos)
     {

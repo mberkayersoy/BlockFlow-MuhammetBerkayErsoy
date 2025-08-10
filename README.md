@@ -32,3 +32,11 @@ Color Block Jam style puzzle game template built in Unity.
 **Save / Load**
 - Save your design in the `Assets/Levels/` folder.
 - Reload later to continue working.
+
+
+<img width="465" height="461" alt="Screenshot 2025-08-10 at 21 44 01" src="https://github.com/user-attachments/assets/1488d2c3-0270-4c58-b43e-797c2e7689e2" />
+<img width="748" height="119" alt="Screenshot 2025-08-10 at 21 44 15" src="https://github.com/user-attachments/assets/d368c01b-9fa7-45b3-9ab3-fe6eb8e6f56c" /><img width="753" height="303" alt="Screenshot 2025-08-10 at 21 43 36" src="https://github.com/user-attachments/assets/2c21b42e-a78b-4416-8152-278e3550ecab" />
+<img width="303" height="486" alt="Screenshot 2025-08-10 at 21 43 48" src="https://g<img width="753" height="80" alt="Screenshot 2025-08-10 at 21 43 16" src="https://github.com/user-attachments/assets/f760c34d-472e-4ef1-b044-48d4af33a4af" />
+<img width="753" height="586" alt="Screenshot 2025-08-10 at 21 43 25" src="https://github.com/user-attachments/assets/554bc951-ccec-4040-8c0d-c63bc6017a2e" />
+ithub.com/user-attachments/assets/9f3f6366-83c3-4a3d-a3fe-33fbb6372a18" />
+

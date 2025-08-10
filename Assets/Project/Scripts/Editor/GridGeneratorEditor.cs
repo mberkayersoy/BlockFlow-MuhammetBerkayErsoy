@@ -2,7 +2,6 @@ using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(GridGenerator))]
 public class GridGeneratorEditor : OdinEditor
 {
     public override void OnInspectorGUI()
